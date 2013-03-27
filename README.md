@@ -17,6 +17,8 @@ as a widget or inserting elsewhere with shortcode.
 
 To run your own Minecraft server I recommend [CraftBukkit](http://bukkit.org// "An Alternative Minecraft Server").
 
+A big thanks goes to [Matt Harzewski]('http://www.webmaster-source.com/') aka [redwallhp]('http://profiles.wordpress.org/redwallhp') for the engine.
+
 MCServerCheck is currently in alpha, and is not ready for deployment at this time.
 
 Our current roadmap is as follows:
