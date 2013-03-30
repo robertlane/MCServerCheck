@@ -24,6 +24,8 @@ add_shortcode( 'mcservercheck', 'mcserver_shortcode' );
 
 function mcserver_shortcode( $atts, $content = 'Minecraft Server' ) {
 
+$bg_img =  plugin_dir_url( __FILE__ )."img/background_rose.png";
+
 extract( shortcode_atts( array(
    'domain' => 'minecraft.example.com',
    'port' => 25565,
@@ -37,11 +39,13 @@ if ($server->online == false) {
 
 ob_start();
 ?>
-<div class="mcserver_online" style="background-color:cyan">
-  <p class="name"><?php echo $content; ?></p>
-  <p class="domain"><?php echo $domain; ?></p>
-  <p class="players"><?php echo "Current Players: ".$server->online_players."/".$server->max_players; ?></p>
-  <p class="motd"><?php echo $server->motd; ?></p>
+<div class="mcserver_online" id="<?php echo $domain; ?>" style="background-image:url('<?php echo $bg_img; ?>');width:500px;height:150px;color:white;font-size:14px;margin-left:auto;margin-right:auto;position:relative;font-family:arial;border:5px;border-radius:5px">
+    <div class="mcserver_stats" style="position:absolute;top:5px;left:10px">
+        <p class="name" style="font-size:1.5em;font-family:'arial black';"><?php echo $content; ?></p>
+        <p class="domain" style="margin:0"><?php echo $domain; ?></p>
+        <p class="players" style="margin:0"><?php echo "Current Players: ".$server->online_players."/".$server->max_players; ?></p>
+        <p class="motd" style="margin:0"><?php echo $server->motd; ?></p>
+    </div>
 </div>
 
 <?php
