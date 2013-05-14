@@ -18,7 +18,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-class MCServerEngine {
+class MCServerStatus {
 
 	public $server;
 	public $online, $motd, $online_players, $max_players;
@@ -60,23 +60,6 @@ class MCServerEngine {
 
 	}
 
-} //Closes Class
-
-/*
-To query a server, you instantiate the class and pass it the IP or domain name of the server,
-as well as the port if it is not the default Minecraft port of 25565. (Do not include “http://”
-or any slashes. Just the hostname or IP.)
-
-include "MCServerStatus.php";
-$server = new MCServerStatus("s.nerd.nu", 25565); //The second argument is optional in this case
-
-Once you have created a new instance of the object, you can use the information that it gathered.
-
-$var = $server->online; //$server->online returns true if the server is online, and false otherwise
-echo $server->motd; //Outputs the Message of the Day
-echo $server->online_players; //Outputs the number of players online
-echo $server->max_players; //Outputs the maximum number of players the server allows
-print_r($server); //Shows an overview of the object and its contents. (For debugging.)
-*/
+}
 
 ?>

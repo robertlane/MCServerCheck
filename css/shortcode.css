@@ -1,0 +1,20 @@
+.mcserver_online {
+
+width:500px;
+height:150px;
+color:red;
+font-size:14px;
+margin-left:auto;
+margin-right:auto;
+position:relative;
+font-family:arial;
+border:5px;
+border-radius:5px;
+
+}
+/*
+mcserver_stats" style="position:absolute;top:5px;left:10px"
+
+mcserver_offline' style='width:500px;height:150px;background-image:url(\"".$bg_img."\");'
+
+*/
